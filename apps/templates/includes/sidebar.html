@@ -1,0 +1,17 @@
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="#" class="b-brand">
+        <!-- ========   Change your logo from here   ============ -->
+        <img width="150px" height="50px" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="" class="logo logo-lg" />
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        {% include 'includes/menu-list.html' %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->

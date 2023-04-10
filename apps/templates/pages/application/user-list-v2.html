@@ -1,0 +1,140 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} User List 2 {% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center g-2">
+                <div class="col">
+                  <h3>Team</h3>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-xl-2 col-md-2">
+                      <div class="media align-items-center">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/user/avatar-3.jpg') }}" alt="User image" />
+                        <div class="media-body ms-3">
+                          <h5 style="margin-top: 12px" class="mb-0">Brian <i class="fas fa-heartbeat text-success"></i></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <h6 class="mb-0">Target</h6>
+                        </div>
+                        <div class="col">
+                          <div class="progress" style="height: 4px">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <h6 class="mb-0">100%</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4">
+                      <div class="d-grid mt-1">
+                        <button style="width: 100%" class="btn btn-block align-items-center justify-content-center btn-outline-primary"><i class="ti ti-user mx-1"></i> View profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-xl-2 col-md-2">
+                      <div class="media align-items-center">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/user/avatar-2.jpg') }}" alt="User image" />
+                        <div class="media-body ms-3">
+                          <h5 style="margin-top: 12px" class="mb-0">Kathy <i class="fas fa-heartbeat text-danger"></i></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <h6 class="mb-0">Target</h6>
+                        </div>
+                        <div class="col">
+                          <div class="progress" style="height: 4px">
+                            <div class="progress-bar bg-danger" style="width: 30%"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <h6 class="mb-0">30%</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4">
+                      <div class="d-grid mt-1">
+                        <button style="width: 100%" class="btn btn-block align-items-center justify-content-center btn-outline-primary"><i class="ti ti-user mx-1"></i> View profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-xl-2 col-md-2">
+                      <div class="media align-items-center">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/user/avatar-1.jpg') }}" alt="User image" />
+                        <div class="media-body ms-3">
+                          <h5 style="margin-top: 12px" class="mb-0">Ellie <i class="fas fa-heartbeat text-warning"></i></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <h6 class="mb-0">Target</h6>
+                        </div>
+                        <div class="col">
+                          <div class="progress" style="height: 4px">
+                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <h6 class="mb-0">70%</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4">
+                      <div class="d-grid mt-1">
+                        <button style="width: 100%" class="btn btn-block align-items-center justify-content-center btn-outline-primary"><i class="ti ti-user mx-1"></i> View profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}

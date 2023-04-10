@@ -1,0 +1,344 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Contact List {% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>Customer List</h5>
+            </div>
+            <div class="card-body">
+
+              <ul class="list-group list-group-flush contact_list">
+                <li class="list-group-item px-0">
+                  <div class="media align-items-center">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view1">
+                      <img class="img-radius img-fluid wid-50" src="{{ url_for('static', filename='assets/images/widget/google-g.png') }}" alt="User image" />
+                    </a>
+                    <a href="#" class="media-body mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view1">
+                      <h4 class="mb-0">Google</h4>
+                      <small class="text-muted">Software</small>
+                    </a>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="media align-items-center">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view2">
+                      <img class="img-radius img-fluid wid-50" src="{{ url_for('static', filename='assets/images/widget/ms.png') }}" alt="User image" />
+                    </a>
+                    <a href="#" class="media-body mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view2">
+                      <h4 class="mb-0">Microsoft</h4>
+                      <small class="text-muted">Software</small>
+                    </a>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="media align-items-center">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view3">
+                      <img class="img-radius img-fluid wid-50" src="{{ url_for('static', filename='assets/images/widget/app.png') }}" alt="User image" />
+                    </a>
+                    <a href="#" class="media-body mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view3">
+                      <h4 class="mb-0">Apple</h4>
+                      <small class="text-muted">Software</small>
+                    </a>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="media align-items-center">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view4">
+                      <img class="img-radius img-fluid wid-50" src="{{ url_for('static', filename='assets/images/widget/meta-m.png') }}" alt="User image" />
+                    </a>
+                    <a href="#" class="media-body mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_add_contact_view4">
+                      <h4 class="mb-0">Meta</h4>
+                      <small class="text-muted">Software</small>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_add_contact" aria-labelledby="offcanvas_add_contactLabel">
+    <div class="offcanvas-body">
+      <div class="media align-items-center">
+        <div class="avtar avtar-l bg-light-primary text-primary rounded-circle"><i class="fas fa-user"></i> </div>
+        <div class="media-body mx-3">
+          <button class="btn btn-outline-primary btn-sm mb-1"><i class="ti ti-upload"></i> Upload</button>
+          <span class="text-muted text-sm d-block">Image size should be 125kb Max.</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">account_circle</i></span>
+          <input type="text" class="form-control" placeholder="Enter Name" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Company</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">business</i></span>
+          <input type="text" class="form-control" placeholder="Enter Company" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Job Title</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">work</i></span>
+          <input type="text" class="form-control" placeholder="Enter Job Title" />
+        </div>
+      </div>
+      <div class="form-group">
+        <select class="form-control" name="pc_product_tag" id="pc_product_tag" multiple>
+          <option value="Choice 1" selected>Work</option>
+          <option value="Choice 2">Personal</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">email</i></span>
+          <input type="text" class="form-control" placeholder="Enter Email" />
+        </div>
+      </div>
+      <div class="form-group">
+        <select class="form-control" name="pc_product_tag1" id="pc_product_tag1" multiple>
+          <option value="Choice 1" selected>Work</option>
+          <option value="Choice 2">Personal</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">email</i></span>
+          <input type="text" class="form-control" placeholder="Enter Email" />
+        </div>
+      </div>
+      <button class="btn btn-link-primary mb-4"><i class="ti ti-circle-plus align-text-bottom me-2"></i> Add New Email</button>
+      <div class="form-group">
+        <select class="form-control" name="pc_product_tag2" id="pc_product_tag2" multiple>
+          <option value="Choice 1" selected>Work</option>
+          <option value="Choice 2">Personal</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">call</i></span>
+          <input type="text" class="form-control" placeholder="Enter Phone Number" />
+        </div>
+      </div>
+      <div class="form-group">
+        <select class="form-control" name="pc_product_tag3" id="pc_product_tag3" multiple>
+          <option value="Choice 1" selected>Work</option>
+          <option value="Choice 2">Personal</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="material-icons-two-tone">call</i></span>
+          <input type="text" class="form-control" placeholder="Enter Phone Number" />
+        </div>
+      </div>
+      <button class="btn btn-link-primary mb-4"><i class="ti ti-circle-plus align-text-bottom me-2"></i> Add New Phone</button>
+      <div class="form-group">
+        <label class="form-label">Birthday</label>
+        <input type="date" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Bio data</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <div class="row">
+        <div class="col-6"
+          ><div class="d-grid"><button class="btn btn-primary">Save</button></div></div
+        >
+        <div class="col-6"
+          ><div class="d-grid"><button class="btn btn-outline-primary" data-bs-dismiss="offcanvas">Cancel</button></div></div
+        >
+      </div>
+    </div>
+  </div>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_add_contact_view1" aria-labelledby="offcanvas_add_contact_viewLabel">
+    <div class="offcanvas-body">
+      <div class="media align-items-center mb-3">
+        <img width="40px" height="40px" class="rounded-circle img-fluid avtar" src="{{ url_for('static', filename='assets/images/widget/google-g.png') }}" alt="User image" />
+        <div class="media-body mx-3">
+          <h4 class="mb-0">Google</h4>
+          <span class="badge bg-light-success rounded-pill f-12 align-baseline">Healty</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">business</i>
+        <div class="media-body ms-3">
+          <p>Software</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">work</i>
+        <div class="media-body ms-3">
+          <p>10,000+ Employees</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">pin_drop</i>
+        <div class="media-body ms-3">
+          <p>Mountain View, California</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_add_contact_view2" aria-labelledby="offcanvas_add_contact_viewLabel">
+    <div class="offcanvas-body">
+      <div class="media align-items-center mb-3">
+        <img class="rounded-circle img-fluid avtar avtar-l" src="{{ url_for('static', filename='assets/images/widget/ms.png') }}" alt="User image" />
+        <div class="media-body mx-3">
+          <h4 class="mb-0">Microsoft</h4>
+          <span class="badge bg-light-success rounded-pill f-12 align-baseline">Healthy</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">business</i>
+        <div class="media-body ms-3">
+          <p>Software</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">work</i>
+        <div class="media-body ms-3">
+          <p>10,000+ Employees</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">pin_drop</i>
+        <div class="media-body ms-3">
+          <p>Redmond, Washington</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_add_contact_view3" aria-labelledby="offcanvas_add_contact_viewLabel">
+    <div class="offcanvas-body">
+      <div class="media align-items-center mb-3">
+        <img class="rounded-circle img-fluid avtar avtar-l" src="{{ url_for('static', filename='assets/images/widget/app.png') }}" alt="User image" />
+        <div class="media-body mx-3">
+          <h4 class="mb-0">Apple</h4>
+          <span class="badge bg-light-success rounded-pill f-12 align-baseline">Healthy</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">business</i>
+        <div class="media-body ms-3">
+          <p>Software</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">work</i>
+        <div class="media-body ms-3">
+          <p>10,000+ Employees</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">pin_drop</i>
+        <div class="media-body ms-3">
+          <p>Cupertino, California</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas_add_contact_view4" aria-labelledby="offcanvas_add_contact_viewLabel">
+    <div class="offcanvas-body">
+      <div class="media align-items-center mb-3">
+        <img width="40px" height="40px" class="rounded-circle img-fluid avtar" src="{{ url_for('static', filename='assets/images/widget/meta-m.png') }}" alt="User image" />
+        <div class="media-body mx-3">
+          <h4 class="mb-0">Meta</h4>
+          <span class="badge bg-light-success rounded-pill f-12 align-baseline">Healty</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">business</i>
+        <div class="media-body ms-3">
+          <p>Software</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">work</i>
+        <div class="media-body ms-3">
+          <p>10,000+ Employees</p>
+        </div>
+      </div>
+      <div class="media align-items-start mb-2">
+        <i class="material-icons-two-tone f-20 opacity-75">pin_drop</i>
+        <div class="media-body ms-3">
+          <p>Menlo Park, California</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+{% block extra_js %}
+  <!-- [Page Specific JS] start -->
+  <!-- tagify -->
+  <script src="{{ url_for('static', filename='assets/js/plugins/choices.min.js') }}"></script>
+  <script>
+    new Choices(document.getElementById('pc_product_tag'), {
+      delimiter: ',',
+      editItems: true,
+      maxItemCount: 5,
+      removeItemButton: true
+    });
+    new Choices(document.getElementById('pc_product_tag1'), {
+      delimiter: ',',
+      editItems: true,
+      maxItemCount: 5,
+      removeItemButton: true
+    });
+    new Choices(document.getElementById('pc_product_tag2'), {
+      delimiter: ',',
+      editItems: true,
+      maxItemCount: 5,
+      removeItemButton: true
+    });
+    new Choices(document.getElementById('pc_product_tag3'), {
+      delimiter: ',',
+      editItems: true,
+      maxItemCount: 5,
+      removeItemButton: true
+    });
+  </script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}

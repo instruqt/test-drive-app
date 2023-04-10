@@ -1,0 +1,101 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} User List 1 {% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+          <div class="card table-card">
+            <div class="card-header">
+              <div class="row align-items-center g-2">
+                <div class="col">
+                  <h5>Team</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Sales Rep</th>
+                      <th>Closed</th>
+                      <th>Open</th>
+                      <th>Lost</th>
+                      <th>Status</th>
+                      <th class="text-center">View</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="media align-items-center">
+                          <div class="flex-shrink-0 wid-40"><img class="img-radius img-fluid wid-40" src="{{ url_for('static', filename='assets/images/user/avatar-3.jpg') }}" alt="User image" /></div>
+                          <div class="media-body ms-3">
+                            <h5 class="mb-1">Brian</h5> 
+                          </div>
+                        </div>
+                      </td>
+                      <td>10</td>
+                      <td>20</td>
+                      <td class="align-items-center">30</td>
+                      <td><span class="badge bg-light-success rounded-pill f-14">Good</span>
+                      </td>
+                      <td class="text-center">
+                        <a href="/application/account-profile-v1"><i data-feather="more-horizontal"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="media align-items-center">
+                          <div class="flex-shrink-0 wid-40"><img class="img-radius img-fluid wid-40" src="{{ url_for('static', filename='assets/images/user/avatar-2.jpg') }}" alt="User image" /></div>
+                          <div class="media-body ms-3">
+                            <h5 class="mb-1">Kathie</h5>
+                          </div>
+                        </div>
+                      </td>
+                      <td>20</td>
+                      <td>30</td>
+                      <td>40</td>
+                      <td><span class="badge bg-light-danger rounded-pill f-14">Poor</span></td>
+                      <td class="text-center">
+                        <a href="/application/account-profile-v1"><i data-feather="more-horizontal"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="media align-items-center">
+                          <div class="flex-shrink-0 wid-40"><img class="img-radius img-fluid wid-40" src="{{ url_for('static', filename='assets/images/user/avatar-1.jpg') }}" alt="User image" /></div>
+                          <div class="media-body ms-3">
+                            <h5 class="mb-1">Ellie</h5>
+                          </div>
+                        </div>
+                      </td>
+                      <td>10</td>
+                      <td>30</td>
+                      <td>50</td>
+                      <td><span class="badge bg-light-success rounded-pill f-14">Good</span></td>
+                      <td class="text-center">
+                        <a href="/application/account-profile-v1"><i data-feather="more-horizontal"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}

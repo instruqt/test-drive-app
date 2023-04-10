@@ -1,0 +1,166 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard Analytics {% endblock title %}
+
+{% block content %}
+
+<style>
+.profile {
+  background-color: rgb(244, 241, 241);
+  border-radius: 5px; 
+  width: 200px;
+}
+</style>
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                  <h3>Overview</h3>
+                  <p>Sales teams performance breakdown</p>
+                </div>
+                <div class="col-auto">
+                  <h3><i class="feather icon-trending-up text-success ms-2"></i> $27, 695.65</h3>
+                </div>
+              </div>
+
+              <p class="mb-3"></p>
+
+              <div class="row align-items-center">
+                <div class="col-auto mb-3">
+                  <a href="/application/team/">
+                  <div class="profile">
+                    <div style="padding: 10px;" class="d-inline-flex align-items-center">
+                      <div class="avtar bg-dark-secondary">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/application/na.png') }}" alt="User image" />
+                      </div>
+                      <h4 class="mb-0 ms-2">NA</h4>
+                      <h4 style="color:green" class="mb-0 ms-2">+45.36%</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+                
+                <div class="col-auto mb-3">
+                  <a href="/application/team/">
+                  <div class="profile">
+                    <div style="padding: 10px;" class="d-inline-flex align-items-center">
+                      <div class="avtar bg-dark-secondary">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/application/eu.png') }}" alt="User image" />
+                      </div>
+                      <h4 class="mb-0 ms-2">EU</h4>
+                      <h4 style="color:red" class="mb-0 ms-2">-20.11%</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-auto mb-3">
+                  <a href="/application/team/">
+                  <div class="profile">
+                    <div style="padding: 10px;" class="d-inline-flex align-items-center">
+                      <div class="avtar bg-dark-secondary">
+                        <img class="img-radius img-fluid wid-60" src="{{ url_for('static', filename='assets/images/application/in.png') }}" alt="User image" />
+                      </div>
+                      <h4 class="mb-0 ms-2">APAC</h4>
+                      <h4 style="color:green" class="mb-0 ms-2">+16.01%</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="account-chart"></div>
+          </div>
+
+          <div class="card table-card">
+            <div class="card-header">
+              <h5>Latest Customers</h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <div class="customers-scroll" style="height: 350px; position: relative">
+                  <table class="table table-hover table-borderless">
+                    <thead>
+                      <tr>
+                        <th>Company</th>
+                        <th>Team</th>
+                        <th>Deal Health</th>
+                        <th class="text-end">Deal size</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/microsoft.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Brian</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$11,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/google.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Brian</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$17,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/amazon.svg') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Ellie</td>
+                        <td style="color:red">At risk</td>
+                        <td class="text-end">$6,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/walmart.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Brian</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$22,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/meta.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Ellie</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$17,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/kesson.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Kathie</td>
+                        <td style="color:red">At risk</td>
+                        <td class="text-end">$4,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/state.png') }}" alt="" class="img-fluid wid-60" /></td>
+                        <td>Ellie</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$9,000</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{{ url_for('static', filename='assets/images/widget/pepsi.png') }}" alt="" class="img-fluid wid-60" /> </td>
+                        <td>Brian</td>
+                        <td style="color:green">Healthy</td>
+                        <td class="text-end">$34,000</td>
+                      </tr></tbody
+                    >
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+
+{% block extra_js %}
+  <!-- Apex Chart -->
+  <script src="{{ url_for('static', filename='assets/js/plugins/apexcharts.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/pages/dashboard-analytics.js') }}"></script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}
